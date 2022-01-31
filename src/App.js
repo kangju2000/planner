@@ -1,7 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import React, { useState, useContext } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
 import { Navbar, Nav, Offcanvas } from "react-bootstrap";
 import { Link, Route, Switch } from "react-router-dom";
 import Planner from "./Planner.js";
