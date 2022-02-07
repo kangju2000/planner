@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/planner/static/css/main.6b884eb0.css",
-    "main.js": "/planner/static/js/main.d118e2d2.js",
+    "main.css": "/planner/static/css/main.77ac2fa3.css",
+    "main.js": "/planner/static/js/main.40471911.js",
+    "static/css/803.7d5ab449.chunk.css": "/planner/static/css/803.7d5ab449.chunk.css",
+    "static/js/803.437dadae.chunk.js": "/planner/static/js/803.437dadae.chunk.js",
     "static/js/787.c71a5068.chunk.js": "/planner/static/js/787.c71a5068.chunk.js",
+    "static/media/Cafe24SsurroundAir.ttf": "/planner/static/media/Cafe24SsurroundAir.2477297bc14b8b2ed082.ttf",
+    "static/media/Cafe24Ssurround.ttf": "/planner/static/media/Cafe24Ssurround.a5df3ce700ca6c98875c.ttf",
     "static/media/SUIT-Medium.woff2": "/planner/static/media/SUIT-Medium.1c6b675ca0fed224235f.woff2",
     "index.html": "/planner/index.html",
-    "main.6b884eb0.css.map": "/planner/static/css/main.6b884eb0.css.map",
-    "main.d118e2d2.js.map": "/planner/static/js/main.d118e2d2.js.map",
+    "main.77ac2fa3.css.map": "/planner/static/css/main.77ac2fa3.css.map",
+    "main.40471911.js.map": "/planner/static/js/main.40471911.js.map",
+    "803.7d5ab449.chunk.css.map": "/planner/static/css/803.7d5ab449.chunk.css.map",
+    "803.437dadae.chunk.js.map": "/planner/static/js/803.437dadae.chunk.js.map",
     "787.c71a5068.chunk.js.map": "/planner/static/js/787.c71a5068.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b884eb0.css",
-    "static/js/main.d118e2d2.js"
+    "static/css/main.77ac2fa3.css",
+    "static/js/main.40471911.js"
   ]
 }
