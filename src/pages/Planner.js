@@ -1,15 +1,20 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import PlanModal from "../components/PlanModal"
 
 function Planner(props) {
     let [plan, setPlan] = useState([
         { a: "수학", b: "기출1회", c: " " },
         { a: "영어", b: "수특 1강풀기", c: "v" },
     ]);
+    const [planModal, setPlanModal] = useState(false);
     return (
         <div>
             <MainPlanner>
+                {planModal === true ? (
+                    <PlanModal setPlanModal={setPlanModal} />
+                ) : null}
                 <PlannerHeader>
                     <PlannerTitle>
                         <p>Seize the day</p>
@@ -35,7 +40,7 @@ function Planner(props) {
                 <PlannerBody>
                     <Plan>
                         <MediumFont>
-                            <p>Music</p>
+                            <p>Plan</p>
                         </MediumFont>
                         <table>
                             <thead></thead>
@@ -46,6 +51,9 @@ function Planner(props) {
                                             plan={a}
                                             alignCenter={props.alignCenter}
                                             key={i}
+                                            onClick={() => {
+                                                setPlanModal(true);
+                                            }}
                                         />
                                     );
                                 })}
@@ -54,6 +62,7 @@ function Planner(props) {
                         <AddPlanBtn
                             onClick={() => {
                                 let newPlan = [...plan];
+                                setPlanModal(true);
                                 newPlan.unshift({
                                     a: "과목",
                                     b: "대충 계획 내용",

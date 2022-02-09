@@ -15,7 +15,7 @@ export default function Login(props) {
                         props.setModal(false);
                     }}
                 />
-                <h1 className="text-center">Login</h1>
+                <h1 className="text-center">로그인</h1>
                 <Form>
                     <Form.Group className="mb-3">
                         <InputStyle
@@ -66,17 +66,17 @@ const LoginModalBlack = styled.div`
 const LoginModalMain = styled.div`
     width: 70vw;
     max-width: 500px;
-    height: 600px;
+    height: 580px;
     padding: 50px;
     border-radius: 7px;
     margin: 0 auto;
     margin-top: 10vh;
     background-color: #2c3333;
-    color: white;
+    color: #faeee7;
     h1 {
         font-family: "cafe-font-bold";
-        font-size: 50px;
-        margin: 50px;
+        font-size: 40px;
+        margin: 40px;
     }
 `;
 const InputStyle = styled(Form.Control)`
@@ -92,7 +92,6 @@ const LoginBtn = styled.button`
     border: none;
     background-color: #325288;
     color: white;
-    margin-bottom: 20px;
     margin-top: 20px;
 `;
 const SignupBtn = styled(LoginBtn)`
