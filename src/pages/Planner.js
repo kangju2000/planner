@@ -1,19 +1,20 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import PlanModal from "../components/PlanModal"
+import PlanModal from "../components/PlanModal";
 
 function Planner(props) {
-    let [plan, setPlan] = useState([
-        { a: "수학", b: "기출1회", c: " " },
-        { a: "영어", b: "수특 1강풀기", c: "v" },
-    ]);
+    let [plan, setPlan] = useState([]);
     const [planModal, setPlanModal] = useState(false);
     return (
         <div>
             <MainPlanner>
                 {planModal === true ? (
-                    <PlanModal setPlanModal={setPlanModal} />
+                    <PlanModal
+                        setPlanModal={setPlanModal}
+                        plan={plan}
+                        setPlan={setPlan}
+                    />
                 ) : null}
                 <PlannerHeader>
                     <PlannerTitle>
@@ -51,9 +52,6 @@ function Planner(props) {
                                             plan={a}
                                             alignCenter={props.alignCenter}
                                             key={i}
-                                            onClick={() => {
-                                                setPlanModal(true);
-                                            }}
                                         />
                                     );
                                 })}
@@ -61,14 +59,7 @@ function Planner(props) {
                         </table>
                         <AddPlanBtn
                             onClick={() => {
-                                let newPlan = [...plan];
                                 setPlanModal(true);
-                                newPlan.unshift({
-                                    a: "과목",
-                                    b: "대충 계획 내용",
-                                    c: "?",
-                                });
-                                setPlan(newPlan);
                             }}
                         >
                             + add plan
@@ -88,10 +79,20 @@ function AddPlan(props) {
         <tr>
             <td>{props.plan.a}</td>
             <td>{props.plan.b}</td>
-            <td className="text-center">{props.plan.c}</td>
+            <td className="text-center">
+                <CheckedPlan type="checkbox"></CheckedPlan>
+            </td>
         </tr>
     );
 }
+
+const CheckedPlan = styled.input`
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    margin-top: 3px;
+    padding: 0;
+`;
 
 const MainPlanner = styled.div`
     width: 100vw;
