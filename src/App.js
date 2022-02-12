@@ -7,6 +7,8 @@ import BtmBar from "./components/BtmBar";
 import Login from "./components/Login";
 import Signup from "./pages/Signup";
 import Planner from "./pages/Planner";
+import Month from "./pages/Month"
+import Week from "./pages/Week"
 
 function App() {
     const [modal, setModal] = useState(false);
@@ -37,6 +39,12 @@ function App() {
                 </Route>
                 <Route path="/daily">
                     <Planner />
+                </Route>
+                <Route path="/weekly">
+                    <Week />
+                </Route>
+                <Route path="/monthly">
+                    <Month />
                 </Route>
                 <Route path="/signup">
                     <Signup />
