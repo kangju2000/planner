@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import PlanModal from "../components/PlanModal";
